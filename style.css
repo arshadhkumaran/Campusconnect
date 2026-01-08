@@ -1,0 +1,170 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #1c1d1f;
+}
+
+/* Navbar */
+.navbar {
+  background: #1c1d1f;
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #cfd2d6;
+}
+#formSection {
+  display: none;
+}
+
+.logged-in #formSection {
+  display: block;
+}
+
+/* Main Layout */
+.main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 6px;
+}
+
+.muted {
+  font-size: 13px;
+  color: #6a6f73;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d7dc;
+  font-size: 14px;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #5624d0;
+}
+
+.form-card textarea {
+  resize: none;
+  height: 80px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #5624d0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #401b9c;
+}
+
+/* Results */
+.placeholder {
+  font-size: 14px;
+  color: #6a6f73;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  text-align: left;
+  font-size: 13px;
+  color: #6a6f73;
+  padding: 10px;
+  border-bottom: 1px solid #e4e8eb;
+}
+
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f2f4;
+  font-size: 14px;
+}
+
+.badge {
+  background: #ede9fe;
+  color: #5624d0;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+.hidden {
+  display: none;
+}
+
+#loginBtn {
+  margin: 20px auto;
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#loginBtn:hover {
+  background: #1558b0;
+}

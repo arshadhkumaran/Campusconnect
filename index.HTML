@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CampusConnect</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+</head>
+
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <div class="logo">CampusConnect</div>
+    <div class="tagline">AI‑Inspired Campus Collaboration</div>
+  </nav>
+
+  <button id="loginBtn" onclick="signInWithGoogle()">
+  Sign in with College Google Account
+</button>
+
+<div id="formSection" class="hidden">
+
+  <!-- your existing inputs + button -->
+
+
+  <main class="main">
+    <!-- Left: Form -->
+    <section class="card form-card">
+      <h2>Create Your Profile</h2>
+      <p class="muted">Enter your details to find the best teammates</p>
+
+      <input id="name" placeholder="Full Name" />
+      <input id="dept" placeholder="Department" />
+      <input id="skills" placeholder="Skills (Frontend, Java, ML)" />
+      <input id="interests" placeholder="Interests (AI, Web, IoT)" />
+      <textarea id="project" placeholder="Project Idea"></textarea>
+
+      <button onclick="submitProfile()">Find Collaborators</button>
+    </section>
+
+    
+
+<p id="authStatus"></p>
+
+
+    <!-- Right: Results -->
+    <section class="card results-card">
+      <h2>Recommended Teammates</h2>
+      <p class="muted">Based on complementary skills & interests</p>
+
+      <div id="results">
+        <div class="placeholder">
+          Results will appear here after submission
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
